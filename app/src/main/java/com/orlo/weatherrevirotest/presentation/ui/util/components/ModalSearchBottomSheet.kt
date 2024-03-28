@@ -41,9 +41,9 @@ fun LocationSearchBottomSheet(
     state: WeatherViewState,
     onDismiss: () -> Unit,
 ) {
-    var searchText by remember { mutableStateOf("") } // Строка для хранения текста поиска
-    var addCity by remember { mutableStateOf(false) } // Строка для хранения города
-    var selectedCity by remember { mutableStateOf("") } // Строка для хранения города
+    var searchText by remember { mutableStateOf("") }
+    var addCity by remember { mutableStateOf(false) }
+    var selectedCity by remember { mutableStateOf("") }
 
     if (addCity) {
         AddCityDialog(
@@ -63,7 +63,6 @@ fun LocationSearchBottomSheet(
             modifier = Modifier.padding(16.dp),
             verticalArrangement = Arrangement.spacedBy(8.dp)
         ) {
-            // Поле для ввода текста поиска
             TextField(
                 colors = TextFieldDefaults.textFieldColors(
                     containerColor = whitee,
@@ -75,7 +74,7 @@ fun LocationSearchBottomSheet(
                 onValueChange = { searchText = it },
                 label = {
                     Text(
-                        "Enter city", color = Color.Gray
+                        "Enter city", color = MaterialTheme.colorScheme.onPrimary
                     )
                 },
                 modifier = Modifier.fillMaxWidth()
@@ -92,7 +91,7 @@ fun LocationSearchBottomSheet(
                 },
                 modifier = Modifier.fillMaxWidth()
             ) {
-                Text("Search", color = Color.Gray)
+                Text("Search", color = MaterialTheme.colorScheme.onPrimary)
             }
 
             LazyColumn(
@@ -109,7 +108,7 @@ fun LocationSearchBottomSheet(
                                 selectedCity = textToAdd
                             },
                         text = textToShow,
-                        color = Color.Black
+                        color = MaterialTheme.colorScheme.onPrimary
                     )
                 }
 
