@@ -74,7 +74,7 @@ fun LocationCard(
     state: WeatherViewState,
 ) {
     var isMenuExpanded by remember { mutableStateOf(false) }
-    var isBottomSheetVisible by remember { mutableStateOf(false) } // Состояние для управления видимостью нижнего листа
+    var isBottomSheetVisible by remember { mutableStateOf(false) }
 
     val cityList by viewModel.cityList.collectAsState(initial = emptyList())
 
@@ -134,12 +134,10 @@ fun LocationCard(
                     Text(text = "Search")
                 }
                 Spacer(modifier = Modifier.padding(top = 8.dp))
-                // Создание элементов списка городов с использованием ViewModel
                 cityList.forEach { city ->
                     CityItem(
                         city = city,
                         onCitySelected = { selectedCity ->
-                            // Вызов метода ViewModel при выборе города из списка
                             viewModel.getCurrentWeatherByCityName(selectedCity)
                             isMenuExpanded = false
                         },

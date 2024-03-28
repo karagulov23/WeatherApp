@@ -31,61 +31,61 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : ComponentActivity() {
 
-    private lateinit var fusedLocationProvideClient: FusedLocationProviderClient
-    private lateinit var locationCallback: LocationCallback
-    private var locationRequired: Boolean = false
+//    private lateinit var fusedLocationProvideClient: FusedLocationProviderClient
+//    private lateinit var locationCallback: LocationCallback
+//    private var locationRequired: Boolean = false
 
-    override fun onResume() {
-        super.onResume()
-        if (locationRequired) startLocationUpdate()
-    }
+//    override fun onResume() {
+//        super.onResume()
+//        if (locationRequired) startLocationUpdate()
+//    }
+//
+//    override fun onPause() {
+//        super.onPause()
+//        locationCallback.let {
+//            fusedLocationProvideClient.removeLocationUpdates(it)
+//        }
+//    }
 
-    override fun onPause() {
-        super.onPause()
-        locationCallback.let {
-            fusedLocationProvideClient.removeLocationUpdates(it)
-        }
-    }
-
-    @SuppressLint("MissingPermission")
-    private fun startLocationUpdate() {
-        locationCallback.let {
-            val locationRequest = com.google.android.gms.location.LocationRequest.Builder(
-                Priority.PRIORITY_HIGH_ACCURACY, 100
-            )
-                .setWaitForAccurateLocation(false)
-                .setMinUpdateIntervalMillis(3000)
-                .setMaxUpdateAgeMillis(100)
-                .build()
-
-            fusedLocationProvideClient.requestLocationUpdates(
-                locationRequest,
-                it,
-                Looper.getMainLooper()
-            )
-        }
-    }
+//    @SuppressLint("MissingPermission")
+//    private fun startLocationUpdate() {
+//        locationCallback.let {
+//            val locationRequest = com.google.android.gms.location.LocationRequest.Builder(
+//                Priority.PRIORITY_HIGH_ACCURACY, 100
+//            )
+//                .setWaitForAccurateLocation(false)
+//                .setMinUpdateIntervalMillis(3000)
+//                .setMaxUpdateAgeMillis(100)
+//                .build()
+//
+//            fusedLocationProvideClient.requestLocationUpdates(
+//                locationRequest,
+//                it,
+//                Looper.getMainLooper()
+//            )
+//        }
+//    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 //        initLocationClient()
         setContent {
             //This will keep value of our current location
-            var currentLocation by remember {
-                mutableStateOf(MyLocation(0.0, 0.0))
-            }
-            //Implement location callback
-            locationCallback = object : LocationCallback() {
-                override fun onLocationResult(p0: LocationResult) {
-                    super.onLocationResult(p0)
-                    for (location in p0.locations) {
-                        currentLocation = MyLocation(
-                            location.latitude,
-                            location.longitude
-                        )
-                    }
-                }
-            }
+//            var currentLocation by remember {
+//                mutableStateOf(MyLocation(0.0, 0.0))
+//            }
+//            //Implement location callback
+//            locationCallback = object : LocationCallback() {
+//                override fun onLocationResult(p0: LocationResult) {
+//                    super.onLocationResult(p0)
+//                    for (location in p0.locations) {
+//                        currentLocation = MyLocation(
+//                            location.latitude,
+//                            location.longitude
+//                        )
+//                    }
+//                }
+//            }
 
             WeatherReviroTestTheme {
                 LaunchedEffect(key1 = lifecycle) {

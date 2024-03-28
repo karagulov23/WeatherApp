@@ -19,5 +19,9 @@ interface WeatherDao {
     @Query("SELECT DISTINCT cityName FROM CurrentWeatherEntity")
     fun getAllCities(): Flow<List<String>>
 
+    @Query("SELECT * FROM CurrentWeatherEntity ORDER BY timestamp DESC LIMIT 1")
+    fun getLastCurrentWeather(): CurrentWeatherEntity?
+
+
 
 }
