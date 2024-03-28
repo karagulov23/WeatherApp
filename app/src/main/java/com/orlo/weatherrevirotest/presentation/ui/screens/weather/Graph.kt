@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import com.orlo.weatherrevirotest.R
 import com.orlo.weatherrevirotest.presentation.ui.theme.SmallTempTextStyle
 import com.orlo.weatherrevirotest.presentation.ui.theme.WeatherReviroTestTheme
+import com.orlo.weatherrevirotest.presentation.ui.theme.orange
 import kotlin.math.abs
 import kotlin.math.sqrt
 
@@ -90,7 +91,8 @@ fun TemperatureGraph(modifier: Modifier = Modifier, entries: List<GraphEntry> = 
     val listState = rememberLazyListState()
     val dotColor = MaterialTheme.colorScheme.onSurface
     val iconColor = MaterialTheme.colorScheme.onSurface.copy(alpha = 0.2f)
-    val lineColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.2f)
+//    val lineColor = MaterialTheme.colorScheme.secondaryContainer.copy(alpha = 0.2f)
+    val lineColor = orange
 
     with(LocalDensity.current) {
         topSectionHeight = if (showChanceOfRain) 40.dp else 0.dp
