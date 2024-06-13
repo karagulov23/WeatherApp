@@ -10,6 +10,7 @@ Main features of the application:
 * Adding/removing cities from favorites.
 * Data caching.
 * Error handling.
+* Android Dynamic Colors.
 
 ## Instruction
 1. Clone repository.
