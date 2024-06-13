@@ -1,6 +1,6 @@
 
 # Karagulov Sultan
-Mobile test task for Android(Kotlin) dev
+Test task for mobile Android(Kotlin) dev
 
 # Weather App
 Main features of the application:
