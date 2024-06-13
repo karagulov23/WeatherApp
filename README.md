@@ -1,6 +1,7 @@
 # Weather App
 Main features of the application:
 * Displays the current weather for the selected city.
+* Displays the week forecast with 3 hour step for the selected city.
 * City search function.
 * Adding/removing cities from favorites.
 * Data caching.
