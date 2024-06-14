@@ -31,7 +31,7 @@ import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import com.orlo.weatherapp.presentation.ui.theme.SmallTempTextStyle
 import com.orlo.weatherapp.presentation.ui.theme.WeatherAppTheme
-import com.orlo.weatherrevirotest.R
+import com.orlo.weatherapp.R
 import kotlin.math.abs
 import kotlin.math.sqrt
 

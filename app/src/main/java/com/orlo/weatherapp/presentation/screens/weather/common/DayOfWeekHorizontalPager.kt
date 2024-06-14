@@ -40,7 +40,7 @@ import androidx.compose.ui.util.lerp
 import androidx.lifecycle.viewmodel.compose.viewModel
 import com.orlo.weatherapp.domain.model.HourlyWeather
 import com.orlo.weatherapp.presentation.screens.weather.WeatherViewModel
-import com.orlo.weatherrevirotest.R
+import com.orlo.weatherapp.R
 import kotlinx.coroutines.launch
 import kotlin.math.absoluteValue
 

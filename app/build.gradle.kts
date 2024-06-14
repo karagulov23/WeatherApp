@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.orlo.weatherrevirotest"
+    namespace = "com.orlo.weatherapp"
     compileSdk = 34
 
     defaultConfig {

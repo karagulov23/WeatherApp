@@ -40,7 +40,7 @@ import androidx.compose.ui.window.PopupProperties
 import com.orlo.weatherapp.presentation.screens.weather.WeatherViewModel
 import com.orlo.weatherapp.presentation.screens.weather.WeatherViewState
 import com.orlo.weatherapp.presentation.ui.theme.WeatherAppTheme
-import com.orlo.weatherrevirotest.R
+import com.orlo.weatherapp.R
 
 @Composable
 fun Header(
